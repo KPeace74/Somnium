@@ -119,6 +119,7 @@
     <sprite>sprites\sprDoor</sprite>
     <sprite>sprites\sprCloud</sprite>
     <sprite>sprites\sprIce</sprite>
+    <sprite>sprites\sprWizardSheild</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -245,6 +246,7 @@
     <object>objects\oDoor</object>
     <object>objects\oSunMoon</object>
     <object>objects\oCloud</object>
+    <object>objects\oWizardSheild</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLoadScreen</room>

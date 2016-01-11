@@ -28,6 +28,7 @@
             <string>cHP = 2500
 mHP = 2500
 name = "Training Dummy"
+event_inherited()
 </string>
           </argument>
         </arguments>

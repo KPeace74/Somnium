@@ -639,8 +639,8 @@ if (global.movementDisabled) {
 \*     */
 if (state == playerStates.FALLING) {
     airTime++
-    debugPrint("Height: " + string(airHeight - y))
-    debugPrint("Time: " + string(airTime))
+    //debugPrint("Height: " + string(airHeight - y))
+    //debugPrint("Time: " + string(airTime))
 } else {
     airHeight = y
     airTime = 0
@@ -706,34 +706,6 @@ if (keyboard_check_pressed(ord("B"))) {
     }
 }
 
-/***********\
- *    C    * 
-\***********/
-if (keyboard_check_pressed(ord("C"))) {
-    if (abilityTimerTwo == 0) {
-        switch (spriteSet) {
-            case COWBOY_ID:
-            abilityTwoCooldown = 25
-            //instance_create(x, y, oRevolver)
-            abilityTimerTwo = abilityTwoCooldown
-            break;
-            case ASTRONAUT_ID:
-            abilityTwoCooldown = 20
-            abilityTimerTwo = abilityTwoCooldown
-            break;
-            case WIZARD_ID:
-            abilityTwoCooldown = 1200
-            abilityTimerTwo = abilityTwoCooldown
-            break;
-            case NINJA_ID:
-            abilityTwoCooldown = 1200
-            abilityTimerTwo = abilityTwoCooldown
-            ninjaInvisible = true
-            alarm[1] = 300
-            break;
-        }
-    }
-}
 
 /***********\
  *    D    * 
@@ -785,7 +757,52 @@ if (keyboard_check_pressed(ord("V"))) {
 }
 
 /***********\
- *    X    * 
+ *    Z    * 
+\***********/
+if (keyboard_check_pressed(ord("Z"))) {
+    switch (room) {
+    case rmLevelTest:
+    changeRoom(0.05, rmLevelMomsHouse)
+    break;
+    case rmLevelMomsHouse:
+    changeRoom(0.05, rmLevelDream)
+    break;
+    case rmLevelDream:
+    changeRoom(0.05, rmLevelNightTest)
+    break;
+    case rmLevelNightTest:
+    changeRoom(0.05, rmLevelTest)
+    break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Abilities
+
+if (global.pause) {
+    exit
+}
+
+/***********\
+ *    1    * 
 \***********/
 if (keyboard_check_pressed(ord("X"))) {
     if (abilityTimerOne == 0 &amp;&amp; !shooting) {
@@ -826,22 +843,32 @@ if (keyboard_check_pressed(ord("X"))) {
 }
 
 /***********\
- *    Z    * 
+ *    2    * 
 \***********/
-if (keyboard_check_pressed(ord("Z"))) {
-    switch (room) {
-    case rmLevelTest:
-    changeRoom(0.05, rmLevelMomsHouse)
-    break;
-    case rmLevelMomsHouse:
-    changeRoom(0.05, rmLevelDream)
-    break;
-    case rmLevelDream:
-    changeRoom(0.05, rmLevelNightTest)
-    break;
-    case rmLevelNightTest:
-    changeRoom(0.05, rmLevelTest)
-    break;
+if (keyboard_check_pressed(ord("C"))) {
+    if (abilityTimerTwo == 0) {
+        switch (spriteSet) {
+            case COWBOY_ID:
+            abilityTwoCooldown = 25
+            //instance_create(x, y, oRevolver)
+            abilityTimerTwo = abilityTwoCooldown
+            break;
+            case ASTRONAUT_ID:
+            abilityTwoCooldown = 20
+            abilityTimerTwo = abilityTwoCooldown
+            break;
+            case WIZARD_ID:
+            abilityTwoCooldown = 1200
+            abilityTimerTwo = abilityTwoCooldown
+            instance_create(x, y, oWizardSheild)
+            break;
+            case NINJA_ID:
+            abilityTwoCooldown = 1200
+            abilityTimerTwo = abilityTwoCooldown
+            ninjaInvisible = true
+            alarm[1] = 300
+            break;
+        }
     }
 }
 </string>

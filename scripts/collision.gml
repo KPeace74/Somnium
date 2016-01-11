@@ -1,5 +1,6 @@
 ///collision(Object to Collide With)
 var collisionObject = argument0
+
 accelerationspeed = movespeed/15
 if (place_meeting(x, y + 1, collisionObject)) {
     if (instance_position(x, y + (sprite_height/2) + 8, obj_solid) != noone) {
@@ -49,6 +50,11 @@ if (place_meeting(x, y + 1, collisionObject)) {
     } else {
         hsp = move * movespeed;
     }
+}
+
+if (alarm[3] > 0 && cHP > 0) {
+    hsp = 8 * sign(x - enemyHitting.x)
+    vsp = -1
 }
 
 if (place_meeting(x, y + vsp, collisionObject)) { 

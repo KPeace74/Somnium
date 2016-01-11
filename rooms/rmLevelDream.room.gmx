@@ -58,6 +58,7 @@
     <instance objName="obj_wall" x="1120" y="992" name="inst_C093D7FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1120" y="960" name="inst_8C7AFE64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oTrainingDummy" x="480" y="1016" name="inst_881DB7DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTestEnemy" x="576" y="992" name="inst_7EE39C47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
